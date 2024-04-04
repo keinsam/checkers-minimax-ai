@@ -2,7 +2,6 @@
 #define SQUARE_HPP
 
 #include "piece.hpp"
-#include "color.hpp"
 
 #include <string>
 
@@ -16,6 +15,7 @@ private :
     Piece* piece;
 
     Square(std::string id_, Color color_, int row_, int col_);
+    Square(Color color_, int row_, int col_);
     Square(Square &other) = delete;
     Square& operator=(Square &other) = delete;
 
@@ -23,6 +23,8 @@ private :
 
 public :
     bool is_empty() const;
+
+    friend class Board;
 
 };
 

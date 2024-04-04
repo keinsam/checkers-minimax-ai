@@ -15,6 +15,8 @@ private:
 
     void set_king();
 
+    friend class Board;
+
 };
 
 #endif
